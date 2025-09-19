@@ -3,37 +3,72 @@
 /* Pretendard Webfont */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-body {font-family: 'Pretendard', sans-serif; font-size: 16px; font-weight: 400; color: #222; line-height: 1.4; margin: 0;padding: 0; letter-spacing: -0.5px;}
+body {font-family: 'Pretendard', sans-serif; font-size: 16px; font-weight: 400; color: #222; line-height: 1.4; margin: 0;padding: 0; letter-spacing: -0.2px;}
 *, *::before, *::after {box-sizing: border-box; margin: 0;padding: 0;}
 img {max-width: 100%;display: block; height: auto;}
 a {text-decoration: none;color: inherit;}
 ul {list-style: none;}
 button {border: none;background: none;cursor: pointer;}
-.container {max-width: 1400px; margin: 0 auto;}
+.container {max-width: 1200px; margin: 0 auto;}
 
 
 
-/* 헤더 고정 */
+/* 헤더 */
+.header {position:fixed; top:0; left:0; width:100%; height:78px; background:#16181A; z-index:1000; display:flex; align-items:center; backdrop-filter:blur(8px); font-size: 16px;}
+.header_inner {display:flex; align-items:center; gap:60px; justify-content:space-between; max-width:1200px; margin:0 auto; width:100%;}
+.gnb{flex:1;}
+.nav_list {display:flex; align-items:center; gap:2.4rem; list-style:none; margin:0; padding:0;width: 100%;}
+.nav_list li a {font-weight:400; color:#fff; transition:0.2s;}
+.nav_list li a:hover {font-weight:700;}
+.nav_request {margin-left:auto;}
+.btn_request {font-size:13px; padding: 10px 12px; border:1px solid #fff; border-radius:6px; transition:0.2s;}
+.btn_request:hover {background:#fff; color:#16181A;}
+
+.hamburger {display:none; background:none; border:none; font-size:24px; cursor:pointer;}
 
 
-.header{position:relative;top:0;left:0;width:100%;height:86px;background:#fff;z-index:1000;display:flex;align-items:center;backdrop-filter:blur(8px); font-size: 15px;}
-.header_inner{display:flex;align-items:center;gap:40px;max-width:1600px;margin:0 auto; width:100%;}
-.logo img{height:20px;display:block}
-.gnb{flex:1; margin-left: 5%;}
-.nav_list{display:flex;align-items:center;gap:2.5rem;list-style:none;margin:0;padding:0;width:100%}
-.nav_list li:last-child{margin-left:auto; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 400; transition: .2s; border: 1px solid #777;}
-.nav_list li:last-child:hover{background:#4b39ff;  color:#fff; border: 1px solid #4b39ff;}
-.nav_list li a{font-weight:500;transition:color .2s ease;text-decoration:none}
-.nav_list li a:hover{font-weight: 700;}
+
+/* 모바일 사이드 메뉴 */
+.mobile_menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100%; background: #fff; box-shadow: -2px 0 8px rgba(0,0,0,0.2); transition: right 0.3s ease; z-index: 2000; padding: 20px; display: flex; flex-direction: column;}
+.mobile_menu ul {list-style: none; margin-top: 40px;}
+.mobile_menu li {margin: 24px 0;}
+.mobile_menu li a {font-size: 17px; color:#222; font-weight:600;}
+.mobile_menu li a.btn_request {display:inline-block; padding:10px 14px; border:1px solid #2157EB; border-radius:6px; color:#2157EB; font-weight:600; margin-top: 20px;}
+.mobile_menu li a.btn_request:hover {background:#2157EB; color:#fff;}
+.mobile_menu.active {right: 0;}
+
+.close_btn { background:none; border:none; font-size:28px; cursor:pointer; position:absolute; top:15px; right:15px;}
+
+.overlay { position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); display:none; z-index:1500;}
 
 
 
 
-footer {border-top: 1px solid #ddd;padding: 2rem 0;font-size: 0.875rem;color: #777;text-align: center;}
+/* 메인 */
+.main_section {padding:120px 0 80px; text-align:center;}
+
+/* 푸터 */
+footer {background:#16181A; color:#ccc; padding:40px 20px 80px;}
+.footer_inner {max-width:1200px; margin:0 auto;}
+.footer_links {margin-bottom:1rem;}
+.footer_links a {margin-right:15px; color:#aaa; font-size:15px; }
+.footer_links a:hover {color:#fff;}
+.footer_info p {margin:4px 0; font-size:13px; line-height:1.4;}
+
+
+
+
 
 /* Responsive layout */
+@media (max-width: 1024px) {
+  .nav_list {gap:1.5rem;}
+}
 @media (max-width: 768px) {
-.nav-list {flex-direction: column;align-items: flex-start;}
+  .gnb {display:none;}
+  .nav-list {flex-direction: column;align-items: flex-start;}
 .container {padding: 0 1rem;}
-footer { font-size: 0.75rem;}
+footer { font-size: 0.75rem; padding:40px 0 80px;}
+  .hamburger {display:block;}
+  .footer_inner {flex-direction:column; gap:20px;}
+  .footer_right {flex-direction:row; gap:20px;}
 }
