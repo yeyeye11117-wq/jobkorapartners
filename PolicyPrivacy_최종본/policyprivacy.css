@@ -1,0 +1,239 @@
+/* 메인 콘텐츠 */
+.mainSec01 {position: relative;display: flex; align-items: flex-start; margin: 0 auto; min-height: 72vh; width:calc(100% - 5%); margin-top: 0.25rem;}
+.mainSec01::before {content: ""; position: absolute; inset: 0; background: #030B42; border-radius: 45px;  margin: 0 auto; height: 100%;}
+.mainSec01_inner { position: relative; z-index: 1; width: 1400px;}
+.mainSec01Text { color: #fff; padding:12% 0 12% 6%;}
+.mainSec01Text p  {font-size: 14px; color: #e8e8ff; font-weight: 600; letter-spacing: 1px;}
+.mainSec01Text h2 { font-size: 52px; font-weight: 600; margin-bottom: 8px; margin: 18px 0 36px;}
+.mainSec01Text h3  {font-size: 21px; color: #e8e8ff;  font-weight: 300;}
+
+
+.hero-buttons { display: flex; gap: 12px; }
+.btn{display: inline-block; padding: 16px 22px; border-radius: 999px; font-size: 18px; font-weight: 400; transition: .2s; }
+.btn-outline {border: 1px solid #fff; color:#fff; }
+.btn-outline:hover {background:#4b39ff;  color:#fff; border: 1px solid #4b39ff;}
+.btn-filled {background:#fff; color:#4b39ff; margin-left: 20px;}
+.btn-filled:hover { background:#4b39ff;  color:#fff;  }
+
+.mainSec01_bottom{position:relative; padding:24px 0;}
+.appBanner{position:relative;left:0;right:0;bottom:0;display:block;opacity:1;transform:translateY(0);transition:transform .35s ease,opacity .35s ease}
+.appBanner.is-fixed{max-width:calc(100% - 20%); margin: 0 auto; position:fixed;left:0;right:0;bottom:16px;z-index:1200;pointer-events:auto;}
+.appBanner_inner{max-width:calc(100% - 4.3%); margin:0 auto; padding:30px 5%; border-radius:40px; background:rgba(246,246,246,.90);backdrop-filter:blur(10px); display:flex;align-items:center;justify-content:space-between;gap:16px}
+.appBanner_left{display:flex;flex-direction:column}
+.appBanner_title{color:#222;font-size:16px;font-weight:700;line-height:1.3}
+.appBanner_desc{color:#666666;font-size:13px;margin-top:2px}
+.appBanner_right{display:flex;align-items:center;gap:10px}
+.appBanner_btn{display:inline-block;padding:10px 14px;border-radius:20px;background:#5061ff;color:#fff;text-decoration:none;font-size:14px;font-weight:700; transition:transform .15s ease}
+.appBanner_btn:active{transform:translateY(1px)}
+
+@media(max-width:768px){
+.appBanner_inner{margin:0 12px}
+.appBanner_btn{padding:10px 12px}
+.appBanner.is-fixed{bottom:calc(16px + env(safe-area-inset-bottom))}
+}
+
+
+/* 아코디언 컨테이너: 총 너비 1400px */
+.mainSec02Tit{margin-top: 120px;}
+.mainSec02 {width: 1400px; margin: 40px auto; display: flex;  align-items: stretch;  user-select: none;  position: relative;  min-height: 380px;}
+.mainSec02_wrapper{margin-top: 120px;}
+/* gap 요소: 실제 DOM으로 두어 hover를 감지 */
+.mainSec02 .gap { flex: 0 0 0px; /* 20px * 3 = 60px */ width: 20px;  pointer-events: auto;}
+/* 패널: 기본 4등분 (1400 - 60) / 4 = 335px */
+.mainSec02 .panel { flex: 0 0 335px; min-height: 380px;  background: #d9d9d9;  border-radius: 30px;  box-shadow: none;  overflow: hidden;  display: flex;  align-items: center;  justify-content: center;  position: relative;  transition: flex-basis .45s ease, width .45s ease, transform .45s ease;}
+.panel__inner {  width: 100%;  padding: 24px;  opacity: .9;  transition: opacity .45s ease, transform .45s ease;}
+.panel.is-active .panel__inner { opacity: 1; transform: translateY(0); }
+/* 마지막 패널은 오른쪽에서 왼쪽으로 확장되는 느낌 */
+.mainSec02 .panel:last-child { transform-origin: right center; }
+/* (선택) 키보드 포커스 표시 */
+.mainSec02 .panel:focus-visible { outline: 2px solid #3c7cff; outline-offset: 4px; }
+.mainSec02 {width: 1400px;margin: 40px auto;display: flex;align-items: stretch;user-select: none; position: relative;min-height: 380px;gap: 10px; /* gap 요소 없이도 가능 */}
+/* 패널: 기본 4등분 */
+.mainSec02 .panel { flex: 1 1 25%; min-height: 380px; background: #d9d9d9;border-radius: 30px; box-shadow: none;overflow: hidden; display: flex;align-items: center;justify-content: center;position: relative; transition: flex-basis .45s ease, flex-grow .45s ease, transform .45s ease;}
+/* hover 시 해당 패널 확장, 나머지는 축소 */
+.mainSec02:hover .panel {flex: 1 1 15%; /* 축소 상태 */}
+.mainSec02:hover .panel:hover {flex: 1 1 55%; /* 확장 상태 */}
+/* 마지막 패널은 오른쪽에서 왼쪽으로 확장되는 느낌 */
+.mainSec02 .panel:last-child { transform-origin: right center;}
+
+/* 항상 보이는 요소 */
+.panel__kicker,
+.panel__title {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+/* hover 전 기본 숨김 상태 */
+.panel__desc,
+.panel__bullets,
+.panel__cta {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+/* hover 시 나타남 */
+.panel:hover .panel__desc,
+.panel:hover .panel__bullets,
+.panel:hover .panel__cta {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+
+.appBanner.is-hidden {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+
+
+/* mainSec03 기본 레이아웃 */
+.mainSec03-wrapper { width: 100%; padding: 60px 0; }
+.mainSec03 { display: flex; flex-direction: column; gap: 40px; }
+.mainSec03Tit{margin-top: 160px;}
+.mainSec03Tit h1 {font-size: 32px; font-weight: 800; }
+
+/* 좌우 영역 */
+.mainSec03Con {display: flex; gap: 5%; }
+.mainSec03Conleft ul, .mainSec03ConRight ul { list-style: none; margin: 0; padding: 0; }
+
+.mainSec03Conleft {flex: 0 0 30%;          /* 왼쪽은 고정 30% */}
+
+.mainSec03ConRight {flex: 0 0 65%;          /* 오른쪽은 고정 70% */}
+
+/* 좌측 리스트 스타일 */
+.mainSec03Conleft ul li {padding: 12px 0; cursor: pointer; border-radius: 8px; transition: all 0.25s ease; color: #9A9A9A; font-size: 16px;}
+.mainSec03Conleft ul li:hover {color: #444; font-weight: 700;}
+.mainSec03Conleft ul li.active {font-weight: 700; color: #4b39ff;}
+
+/* 우측 리스트 스타일 */
+.mainSec03ConRight ul li {padding: 14px 18px; border-bottom: 1px solid #eee; font-size: 15px; line-height: 1.5;}
+
+
+.mainSec03ConRight ul li:last-child { border-bottom: none; }
+
+.mainSec03ConRight{ display:flex;align-items:center;justify-content:space-between;gap:40px; border-radius:16px}
+.mainSec03ConRight .text-wrap{flex:1}
+.mainSec03ConRight .title{font-size:24px;font-weight:700;color:#000;margin-bottom:12px;line-height:1.4}
+.mainSec03ConRight .desc{font-size:14px;color:#555;margin-bottom:20px;line-height:1.6}
+.mainSec03ConRight .btn-detail{display:inline-block;padding:10px 20px;background:#5061ff;color:#fff;font-size:14px;font-weight:600;border-radius:24px;text-decoration:none}
+.mainSec03ConRight .btn-detail:hover{background:#3f4fd9}
+.mainSec03ConRight .img-wrap{flex:1;display:flex;justify-content:center;}
+.mainSec03ConRight .img-wrap img{max-width:100%;height:auto;display:block}
+
+.mainSec03ConRight{opacity:0;pointer-events:none;transition:opacity .3s}
+.mainSec03ConRight.is-open{opacity:1; pointer-events:auto; }
+.mainSec03ConRight [data-pane]{display:none}
+.mainSec03ConRight [data-pane].is-active{display:flex;align-items:center;justify-content:space-between;} 
+
+
+
+.mainSec04-wrapper{position:relative;width:100%;}
+.mainSec04-stage{position:relative;height:220vh}
+.mainSec04-sticky{position:sticky;top:0;height:100vh;width:100%;overflow:hidden}
+.mainSec04-card{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:1400px;height:420px;border-radius:32px;overflow:hidden;will-change:width,height,border-radius}
+.mainSec04-bg{position:absolute;inset:0}
+.mainSec04-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mainSec04-copy{position:absolute;left:64px;top:64px;color:#fff;z-index:2}
+.mainSec04-copy h2{font-size:48px;line-height:1.2;margin:0}
+
+
+.mainSec05-wrapper{position:relative;width:100%;padding:80px 0;}
+.mainSec05{display:flex;flex-direction:column;gap:32px}
+.mainSec05Tit{margin-top: 120px;}
+.mainSec05Tit h2{color:#222;font-size:40px;margin:0}
+.mainSec05-scroller{position:relative;overflow:hidden}
+.mainSec05-track{display:flex;gap:40px;list-style:none;margin:0;padding:8px 8px 16px;user-select:none}
+.news-card{flex:0 0 340px}
+.news-thumb{width:100%;height:220px;background:#f1f1f5;border-radius:24px}
+.news-meta{margin-top:16px}
+.news-kicker{font-size:12px;color:#5061ff;font-weight:700;margin-bottom:10px}
+.news-title{color:#333;font-size:16px;line-height:1.5}
+
+/* ===== 패널 내부 콘텐츠 ===== */
+.panel { position: relative; color: #222; isolation: isolate; /* 오버레이 레이어 분리 */}
+/* 배경 이미지/비주얼 */
+.panel__media { position: absolute; inset: 0; background-size: cover; background-position: center; transform: scale(1.02); transition: transform .6s ease, opacity .6s ease; z-index: 0;}
+/* 가독성을 위한 그라데이션 오버레이 */
+.panel__overlay { position: absolute; inset: 0; z-index: 1; opacity: .96; transition: opacity .45s ease;}
+/* 타이포 & 레이아웃 */
+.panel__inner {position: relative; z-index: 2; display: grid; gap: 4px;padding: 48px 24px 24px; height: 100%; align-content: start;             /* 아래 정렬 */}
+.panel__kicker {font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; opacity: .9;}
+.panel__title {font-weight: 800;font-size: clamp(18px, 2vw, 22px); line-height: 1.28; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;overflow: hidden; text-wrap: balance;}
+.panel__desc {margin-top:16px; font-size: 14px; line-height: 1.55; opacity: .9;display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;overflow: hidden;}
+/* CTA 버튼 */
+.panel__cta { color:#5061ff; background: rgba(255,255,255,1); border: 1px solid rgba(255,255,255,1); border-color: rgba(255,255,255,1); display: inline-flex; align-items: center; gap: 8px;width: fit-content; margin-top: 120px; font-size: 13px; font-weight: 700; padding: 10px 14px;
+  border-radius: 999px;backdrop-filter: blur(6px);transition: background .25s ease, border-color .25s ease, transform .25s ease;}
+.panel__cta:hover { background: rgba(0,0,0,0.1);color: #666; border: 1px solid rgba(255,255,255,.2); transform: translateY(-1px);}
+
+/* 호버/활성 시 미세 인터랙션 */
+.panel.is-active .panel__media { transform: scale(1.06); }
+.panel.is-active .panel__overlay { opacity: 1; }
+.panel.is-active .panel__inner { opacity: 1; }
+
+/* 패널별 배경(이미지나 그라데이션) — 필요 시 이미지 경로로 교체 */
+.panel--insight   .panel__media { background-image: linear-gradient(120deg,#F6F6F6); }
+.panel--automation .panel__media { background-image: linear-gradient(120deg,#F6F6F6); }
+.panel--analytics .panel__media { background-image: linear-gradient(120deg,#F6F6F6); }
+.panel--support   .panel__media { background-image: linear-gradient(120deg,#F6F6F6); }
+
+/* 다크 텍스트 대비가 필요하면 오버레이 진하게
+.panel--light .panel__overlay { background: linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.45) 60%, rgba(0,0,0,.75) 100%); } */
+
+.mainSec06-wrapper {width: 100%; padding: 80px 0; margin-bottom:120px}
+.mainSec06 {display: flex; flex-direction: column; gap: 40px;}
+.mainSec06Tit h1 {font-size: 32px; font-weight: 800;}
+.mainSec06Con {display: flex; gap: 2%;}
+.mainSec06ConLeft {flex: 0 0 48%; border-radius: 40px; overflow: hidden; background-color: #F6F6F6;}
+.mainSec06ConLeft img {width: 100%; height: auto; display: block;}
+.mainSec06ConRight {flex: 0 0 50%; display: flex; flex-direction: column; gap: 20px;}
+.mainSec06Box {
+  flex: 1;
+  background: #F8F8F8;
+  border-radius: 30px;
+  padding: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+.mainSec06Box:hover {background: #ECECEC;}
+.mainSec06Box.arrow {justify-content: space-between;}
+
+
+
+
+
+
+
+
+/* 반응형(축약) */
+@media (max-width: 1024px) {
+  .panel__inner { padding: 20px; }
+  .panel__desc { -webkit-line-clamp: 2; }
+  .panel__bullets { display: none; }  /* 모바일에선 간결하게 */
+}
+
+
+
+
+@media(max-width:1440px){
+  .mainSec04-copy h2{font-size:36px}
+}
+
+
+
+/* 간단한 반응형: 1024px 이하에서 스택 */
+@media (max-width: 1024px) {
+  .mainSec02 { width: 100%; padding: 0 16px; display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .mainSec02 .gap { display: none; }
+  .mainSec02 .panel { flex: 1 1 auto; width: 100%; min-height: 220px; }
+}

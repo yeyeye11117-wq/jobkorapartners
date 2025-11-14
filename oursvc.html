@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>잡코리아 파트너스 - 그룹사 서비스 알아보기</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <link rel="stylesheet" href="../src/common222.css">
+  <link rel="stylesheet" href="../src/styles.css">
+  <link rel="stylesheet" href="../src/blog.css">
+  <script src="../scripts/main.js" defer></script>
+  <script src="../scripts/blog.js" defer></script>
+</head>
+<body>
+
+
+  <!--헤더 PC-->
+  <div class="header">
+    <div class="container header_inner">
+      <div class="logo">
+        <a href="../pages/main.html"><img src="../public/images/logo_W.svg" alt="잡코리아 파트너스 로고"></a>
+      </div>
+      <div class="gnb">
+        <ul class="nav_list">
+          <li><a href="../pages/services_services.html">서비스 소개 </a></li>
+          <li><a href="../pages/recruiteall.html">채용정보 </a></li>
+          <li><a href="../pages/blog.html">블로그</a></li>
+          <li class="nav_request"><a href="../pages/contact.html" class="btn_request">서비스 신청하기</a></li>
+        </ul>
+      </div>
+      <button class="hamburger" aria-label="메뉴 열기"><img src="../public/images/mo_h_menu.svg" alt="메뉴바"></button>
+    </div>
+  </div>
+
+  <!-- 전체 풀폭 메가메뉴(헤더 바로 다음에 둬야 hover 유지) -->
+  <div class="nav_megamenu_all" role="menu">
+  <div class="nav_megamenu_inner wrap">
+      <div class="nav_megamenu_inner container">
+      <div class="nav_megamenu_col">
+        <div class="nav_megamenu_tit">서비스 소개</div>
+        <ul class="nav_megamenu_list">
+          <li><a href="../pages/services_services.html">인재파견</a></li>
+          <li><a href="../pages/services_dogup.html">도급 · 업무대행</a></li>
+          <li><a href="../pages/services_rpo.html">채용대행</a></li>
+          <li><a href="../pages/services_headhunting.html">헤드헌팅</a></li>
+        </ul>
+      </div>
+      <div class="nav_megamenu_col">
+        <div class="nav_megamenu_tit">채용정보</div>
+        <ul class="nav_megamenu_list">
+          <li><a href="../pages/recruiteall.html">전체 채용정보</a></li>
+          <li><a href="../pages/recruit_region.html">지역별 채용</a></li>
+          <li><a href="../pages/recruit_big.html">대기업 채용</a></li>
+        </ul>
+      </div>
+      <div class="nav_megamenu_col">
+        <div class="nav_megamenu_tit">블로그</div>
+        <ul class="nav_megamenu_list">
+          <li><a href="../pages/blog_best.html">우수사원 인터뷰</a></li>
+          <li><a href="../pages/blog_office.html">그룹사 알아보기</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- 모바일 사이드 메뉴 -->
+  <div class="mobile_menu" id="mobileMenu">
+    <button class="close_btn" id="closeBtn"><img src="../public/images/mo_h_close.svg" alt="메뉴 닫기"></button>
+    <ul>
+      <li><a href="/about.html">서비스소개</a></li>
+      <li><a href="/services.html">채용정보</a></li>
+      <li><a href="/recruit.html">블로그</a></li>
+      <li><a href="/news.html">고객지원</a></li>
+      <li><a href="/request.html" class="btn_request">서비스 신청하기</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="toptit_wrap" id="blog_toptit">
+    <div class="recruit_header container">
+      <div class="title_area scroll-fade-up">
+        <h1>함께 만들어가는<br>채용이야기를 들려드립니다</h1>
+      </div>
+    </div>
+  </div>
+    
+  <!--채용정보영역 -->
+  <main class="container subtit_wrap">
+        <div class="recruit_all_subtit"><h1>그룹사의 다양한 서비스를<br>확인해보세요</h1></div>
+
+<!-- 상단 필터/버튼 영역 -->
+<div class="common_filters blog_filters">
+
+<button onclick="location.href='blog.html'">우수사원 인터뷰<img src="../public/images/icon_new_page.png" alt="새창"></button>
+  <button id="blog_active"  onclick="location.href='oursvc.html'">그룹사 알아보기<img src="../public/images/icon_new_page.png" alt="새창"></button>
+
+
+  <div class="keyword_box">
+    <input type="text" id="blogKeyword" placeholder="키워드 검색">
+      <button id="blogSearchBtn"><img src="../public/images/icon_search.svg" alt="검색"></button>
+    </div>
+</div>
+
+
+<!-- ===== OUR SERVICES SECTION ===== -->
+<div class="ourservices_wrap">
+  <div class="container ourservices_inner">
+    <h2 class="section_tit">OUR SERVICES</h2>
+    <div class="ourservices_grid">
+      <div class="ourservices_card">
+        <div class="ourservices_card_img"><img src="../public/images/jobkorea.svg" alt="잡코리아 로고"></div>
+        <div class="ourservices_card_txt"><a href="#"><h3>잡코리아</h3><p>대한민국 대표 취업 플랫폼</p></a></div>
+      </div>
+      <div class="ourservices_card">
+        <div class="ourservices_card_img"><img src="../public/images/albamon.svg" alt="알바몬 로고"></div>
+        <div class="ourservices_card_txt"><a href="#"><h3>알바몬</h3><p>대한민국 대표 아르바이트 플랫폼</p></a></div>
+      </div>
+      <div class="ourservices_card">
+        <div class="ourservices_card_img"><img src="../public/images/bossmon.svg" alt="보스몬 로고"></div>
+        <div class="ourservices_card_txt"><a href="#"><h3>보스몬</h3><p>알바생 통합관리 앱 서비스</p></a></div>
+      </div>
+      <div class="ourservices_card">
+        <div class="ourservices_card_img"><img src="../public/images/ninehire.svg" alt="나인하이어 로고"></div>
+        <div class="ourservices_card_txt"><a href="#"><h3>나인하이어</h3><p>잡코리아의 채용관리 솔루션</p></a></div>
+      </div>
+      <div class="ourservices_card">
+        <div class="ourservices_card_img"><img src="../public/images/gig.svg" alt="긱몬 로고"></div>
+        <div class="ourservices_card_txt"><a href="#"><h3>긱몬</h3><p>지역기반 재능 거래 플랫폼</p></a></div>
+      </div>
+      <div class="ourservices_card">
+        <div class="ourservices_card_img"><img src="../public/images/gamejob.svg" alt="게임잡 로고"></div>
+        <div class="ourservices_card_txt"><a href="#"><h3>게임잡</h3><p>국내 최초 게임전문 취업포탈</p></a></div>
+      </div>
+       <div class="ourservices_card">
+        <div class="ourservices_card_img"><img src="../public/images/klik.svg" alt="KLiK 로고"></div>
+        <div class="ourservices_card_txt"><a href="#"><h3>KLiK</h3><p>외국인 인재 채용 서비스</p></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== WORKPLACE SECTION (가로 스크롤) ===== -->
+<div class="workplace_wrap">
+  <div class="container workplace_head">
+    <h2 class="section_tit">WORKPLACE</h2>
+  </div>
+
+  <div class="workplace_scroll">
+    <div class="workplace_track">
+      <div class="workplace_card">
+        <img src="../public/images/seoul01.webp" alt="교대오피스">
+      </div>
+      <div class="workplace_card">
+        <img src="../public/images/seoul02.webp" alt="교대오피스">
+      </div>
+      <div class="workplace_card">
+        <img src="../public/images/busan01.webp" alt="부산오피스">
+      </div>
+      <div class="workplace_card">
+        <img src="../public/images/busan02.webp" alt="부산오피스">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+   <div class="sub_cta">
+  <div class="sub_cta_inner">
+    <div class="sub_cta_text">
+      <div class="mainSec_tit">지금 더 빠른 채용을<br>경험해보세요</div>
+    </div>
+    <a href="/contact.html" class="sub_cta_btn">채용 시작하기</a>
+  </div>
+</div>
+
+
+  <!--푸터 -->
+  <footer>
+    <div class="container footer_inner">
+      <div class="footer_links">
+        <a href="/policy.html">개인정보처리방침</a> 
+        <a href="/about.html">회사소개</a> 
+        <a href="/group.html">그룹사소개</a>
+      </div>
+      <div class="footer_info">
+        <p><strong>잡코리아파트너스 유한회사</strong></p>
+        <p>대표 : 이지웅 | 근로자파견사업 허가번호 : 2024-610</p>
+        <p>주소 : 서울시 서초구 서초대로 301 동익성봉빌딩 16~18층</p>
+        <p>이메일 : jkp_contact@jobkorea.co.kr</p>
+        <p>대표번호 : 070-8671-2254 (평일 09:00~18:00) | 팩스 : 0503-8379-5409</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

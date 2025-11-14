@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/* Pretendard Webfont */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body {font-family: 'Pretendard', sans-serif; font-size: 16px; font-weight: 400; color: #222; line-height: 1.65; margin: 0; padding: 0; letter-spacing: -0.015em;}
+*, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0;}
+img {max-width: 100%;display: block; height: auto;}
+a {text-decoration: none;color: inherit;}
+ul {list-style: none;}
+button {border: none;background: none;cursor: pointer;}
+.container {max-width: 1200px; margin: 0 auto;}
+
+
+
+
+/* 스크롤 등장 기본 상태 */
+.scroll-fade-up {opacity: 0;transform: translateY(40px);transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);will-change: opacity, transform;}
+
+/* 화면에 들어왔을 때 활성화 상태 */
+.scroll-fade-up.active {opacity: 1;transform: translateY(0);}
+
+
+
+/* 헤더 */
+.header {z-index: 9999; position:fixed; top:0; left:0; width:100%; height:72px; display:flex; align-items:center; backdrop-filter:blur(8px); font-size: 14px;
+   background:rgba(11,18,32,1); border-bottom:1px solid rgba(29,31,38,1); }
+.header_inner {display:flex; align-items:center; gap:48px; justify-content:space-between; max-width:1200px; margin:0 auto; width:100%; padding-top: 1px;}
+.gnb{flex:1;}
+.nav_list {display:flex; align-items:center; gap:3.3rem; list-style:none; margin:0; padding:0; width: 100%;}
+.nav_list li a {font-weight:400; transition:0.2s; color: #C1C3C9;}
+.nav_list li a:hover {font-weight:500; color:#fff;}
+.nav_request {margin-left:auto;}
+.nav_list .btn_request {padding: 8px 16px; background-color:rgba(33, 87, 235,1); color:rgba(231, 231, 231, 1); border-radius:999px; transition:0.2s;}
+.nav_list .btn_request:hover {color:rgba(231, 231, 231, 1);}
+
+
+/* 메인 헤더만 투명도 유지 */
+#main-header {background: rgba(11,18,32,0.1);backdrop-filter: blur(8px);border-bottom: 1px solid rgba(255,255,255,.08); transition: none;}
+/* 다른 페이지는 불투명 헤더 유지 */
+body:not(.main-page) .header {background: rgba(11,18,32,1)}
+body:not(.main-page) #main_footer{margin-top: 0}
+
+
+/* 메인페이지: 헤더 또는 메가메뉴 활성 시 불투명도 1로 전환 */
+.header#main-header:hover,
+.nav_megamenu_all:hover,
+.nav_megamenu_all.is-active,
+.header#main-header.menu-open { background: rgba(11,18,32,1); transition: background 0.15s ease;}
+
+.hamburger {display:none; background:none; border:none; font-size:24px; cursor:pointer;}
+
+/* 모바일 사이드 메뉴 */
+.mobile_menu { position: fixed; top: 0; right: -100%; width: 80%; height: 100%; background: #fff; box-shadow: -4px 0 12px rgba(0,0,0,0.1);
+  transition: right 0.35s ease; z-index: 9999; padding: 24px; display: flex; flex-direction: column;}
+.mobile_menu ul {list-style: none; margin-top: 40px;}
+.mobile_menu li {margin: 24px 0;}
+.mobile_menu li a {font-size: 17px; color:#222; font-weight:600;}
+.mobile_menu li a.btn_request {display:inline-block; padding:10px 14px; border:1px solid #2157EB; border-radius:6px; color:#2157EB; font-weight:600; margin-top: 20px;}
+.mobile_menu li a.btn_request:hover {background:#2157EB; color:#fff;}
+.mobile_menu.active {right: 0;}
+.close_btn { background:none; border:none; font-size:28px; cursor:pointer; position:absolute; top:20px; right:20px;}
+.overlay {position: fixed; inset: 0; background: rgba(0, 0, 0, 0); pointer-events: none; transition: background 0.3s ease; z-index: 9998;}
+.overlay.active {background: rgba(0, 0, 0, 0.5); pointer-events: auto;}
+
+
+/* ===== 헤더 드롭다운 메뉴 (서비스 소개) ===== */
+.nav_services {position: relative;}
+.nav_services > a {display: flex; align-items: center; gap: 6px;}
+.nav_arrow {width: 10px; height: auto; transition: transform 0.25s ease;}
+
+/* hover 영역 전체(li) 인식 */
+.nav_services:hover .nav_submenu {opacity: 1;visibility: visible;top: 48px;}
+
+/* ===== 고정 레이아웃 파라미터 ===== */
+:root{--header-h:72px; --container-w:1200px; --nav-gap:2.4rem; --nav-offset:260px;} /* nav-offset = 로고 영역(로고+간격)의 픽셀값 */
+
+/* ===== 전체형 메가메뉴 (한 번에 펼쳐짐) ===== */
+.nav_list li>a{display:flex;align-items:center;gap:6px;}
+.nav_arrow{width:10px;height:auto;transition:transform .25s ease;}
+.nav_megamenu_all{position:fixed; height: 280px; top:var(--header-h);left:0;width:100vw;background: rgba(11,18,32,1);
+  border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);
+  opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease,visibility .25s ease;z-index:1500;}
+.nav_megamenu_tit{font-size:12px;color:#777;font-weight:300;margin-bottom:2px; color: #aaa;}
+.nav_megamenu_list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;}
+.nav_megamenu_list li a{display:block; color:#C1C3C9;font-size:14px;display:block;padding:6px 0;transition:color .2s ease;}
+.nav_megamenu_list li a:hover{color:#fff;}
+
+/* 타이포/호버 */
+.nav_megamenu_col{display:flex; flex-direction:column; gap:10px;}
+
+/* 헤더 높이가 72px인 페이지(main 등)에서는 해당 파일(:root)에 --header-h:72px; 로 덮어쓰세요 */
+/* ===== 전체형 메가메뉴(풀폭) - 고정 너비/정렬 ===== */
+.nav_list li>a{display:flex; align-items:center; gap:6px;}
+.nav_arrow{width:10px; height:auto; transition:transform .25s ease;}
+.header:hover + .nav_megamenu_all, .nav_megamenu_all:hover{opacity:1; visibility:visible; transform:translateY(0);}
+
+/* 컨테이너를 헤더와 동일 고정폭(1200px)로 중앙 정렬 */
+.nav_megamenu_inner{position:absolute; width:620px;  margin: 0 auto; display:grid; column-gap:var(--nav-gap); padding:0;} 
+.nav_megamenu_inner.wrap{width: 1200px; margin: 0 auto; position: relative; left:0;}
+/* ↑ 첫 번째 가상 컬럼을 '비어있는 오프셋'으로 사용 → 상단 첫 GNB 항목(서비스 소개)의 텍스트 시작선과 2뎁스 1컬럼 시작선이 정확히 일치 */
+
+/* 각 컬럼을 상단 GNB 항목과 1:1 정렬 */
+.nav_megamenu_col:nth-child(1){grid-column:1;} /* 서비스 소개 */
+.nav_megamenu_col:nth-child(2){grid-column:2;} /* 채용정보 */
+.nav_megamenu_col:nth-child(3){grid-column:3;} /* 블로그 */
+.nav_megamenu_col:nth-child(4){grid-column:4; justify-self: end;} /* 블로그 */
+.nav_megamenu_inner {position: absolute;width: 1200px;margin: 0 auto;display: grid;grid-template-columns: 180px 180px 180px 1fr; /* 왼쪽 3컬럼 고정폭 */column-gap: var(--nav-gap);padding: 0;left: 0; height: 100%;}
+.nav_megamenu_col{padding: 40px 0 20px;}
+
+/* 오른쪽 브랜드 컬럼 */
+.nav_megamenu_brand {grid-column: 4; justify-self: end; position: relative;border-left: none; /* 기존 선 제거 */padding-left: 40px;}
+.nav_megamenu_col.nav_megamenu_brand{border-left: 1px solid rgba(255,255,255,0.2);}
+.nav_megamenu_brand .brand_tit {font-size: 13px; color: #bfc3c8; margin-bottom: 12px;}
+
+.brand_wrap {display: flex; align-items: center; gap: 30px;}
+.brand_wrap a img {width: 50px;height: auto;object-fit: contain;transition: opacity 0.2s ease;}
+.brand_wrap a{font-size: 13px; text-align: center; color: #C1C3C9;}
+.brand_wrap a:hover{color:#fff;}
+
+/* Hover 시 전체 표시 */
+.header:hover + .nav_megamenu_all,
+.nav_megamenu_all:hover {visibility:visible;transform:translateY(0);  z-index: 9999;}
+
+
+/* ===== sub_cta (서브 하단 채용시작하기)*/
+.sub_cta { width:100%; justify-content:center; padding:110px 0 100px; background: linear-gradient( 180deg,#0B0C10 40%,#0032FC 90%,#0B0C10 100%); margin-top: 200px;}
+.sub_cta_inner { display:flex;  flex-direction: column; align-items:center; justify-content:center; text-align: center; width:1200px; margin: 0 auto; max-width:100%; height: 300px; border-radius:16px; padding:26px 40px;  }
+.sub_cta_text { display:flex; flex-direction:column; gap:0px; }
+.sub_cta_text .mainSec_tit{ text-align: center;  font-size:48px; color:#ffffff; font-weight:600;} 
+.sub_cta_btn { background:#2157EB; color:#ffffff; font-size:14px; font-weight:600; padding:12px 24px; border-radius:999px; text-decoration:none; transition:background 0.25s ease; margin-top: 40px;}
+.sub_cta_btn:hover { background:#1B47C2; }
+
+
+
+/* ===== mainSec07 (Floating CTA 동일 디자인 / 고정 아님) ===== */
+.mainSec07 { width:100%; justify-content:center; padding:40px 0 160px; background: linear-gradient( 180deg,#0B0C10 32%,#0032FC 100%,#0B0C10 100%);   background-color: #15171C}
+.mainSec07_inner { display:flex;  flex-direction: column; align-items:center; justify-content:center; text-align: center; width:1200px; margin: 0 auto; max-width:100%; height: 300px; border-radius:16px; padding:26px 40px;  }
+.mainSec07_text { display:flex; flex-direction:column; gap:0px; }
+.mainSec07_text .mainSec_tit{ text-align: center;}
+.mainSec07_btn { background:#2157EB; color:#ffffff; font-size:14px; font-weight:600; padding:12px 24px; border-radius:999px; text-decoration:none; transition:background 0.25s ease; margin-top: 40px;}
+.mainSec07_btn:hover { background:#1B47C2; }
+
+
+
+/* 반응형: 모바일은 숨김 */
+@media(max-width:1024px){.nav_megamenu_all{display:none;}}
+
+
+
+/* 푸터 */
+footer {color:#ccc; padding:60px 0 90px; border-top: #16181A 1px solid; background:rgba(18,20,23,1); }
+.footer_info :first-child{font-weight: 500; margin-bottom: 10px; font-size: 15px; color: #ccc;}
+.footer_inner {max-width:1200px; margin:0 auto;}
+.footer_links {margin-bottom:2rem;}
+.footer_links a {margin-right:16px; color:#aaa; font-size:14px;}
+.footer_links a:hover {color:#fff;}
+.footer_info p {margin:4px 0; font-size:13px; line-height:1.4; font-weight: 300; color: #a4a4a4;}
+
+
+
+
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .nav_list {gap:1.5rem;}
+}
+@media (max-width: 768px) {
+  .gnb {display:none;}
+  .nav-list {flex-direction: column;align-items: flex-start;}
+.container {padding: 0 1.5rem;}
+footer { font-size: 0.75rem; padding:40px 0 80px;}
+  .hamburger {display:block;}
+  .footer_inner {flex-direction:column; gap:20px;}
+  .footer_right {flex-direction:row; gap:20px;}
+}
+
+  .footer_right {flex-direction:row; gap:20px;}
+

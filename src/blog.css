@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+.blog_filters{gap:16px;}
+.blog_filters button { flex:0 0 180px; /* 고정 폭 180px */ display:flex; align-items:center; gap:6px;font-weight: 500; justify-content:space-between; /* 텍스트는 왼쪽, 아이콘은 오른쪽 */}
+.keyword_box button{padding-right: 0}
+#blog_active{background-color: #111; color: #fff;}
+
+
+.blog_list { display:grid; grid-template-columns:repeat(3, 1fr); /* 한 행에 3개 */  gap:30px; padding-bottom: 120px;}
+.blog_item { background:#fff; overflow:hidden; transition:box-shadow .2s;}
+.blog_item .thumb { width:100%; height:251px;/* 높이 고정 */ overflow:hidden; display:flex;align-items:center; justify-content:center;}
+.blog_item .thumb img {width:100%; height:100%; object-fit:cover; border-radius: 8px; /* 꽉 채우기 */}
+.blog_item h3 {font-size:18px; margin-top:14px; font-weight: 600; color: #111218;}
+.blog_item p {font-size:12px; color:#2157Eb; margin-top:24px; background-color: #ECF3FF; display: inline-block; padding: 5px 10px; border-radius: 4px;} 
+
+
+.load_more_wrap{display: flex;  justify-content: center;}
+
+#loadMoreBtn{padding:16px 60px; border: 1px solid #222; border-radius: 4px; font-weight: 600; display: flex; align-items: center; align-content: center;}
+
+/*인터뷰*/
+.itv_wrap {max-width: 1200px; margin: 100px auto; font-family: 'Pretendard'; color: #222;}
+.itv_inner {display: flex; gap: 80px; align-items: flex-start;}
+.itv_profile {flex: 0 0 320px; display: flex; flex-direction: column; align-items: flex-start;}
+.itv_profile h3 {font-size: 26px; line-height: 1.5; font-weight: 600; color: #222;}
+.itv_profile h3 strong {font-weight: 700;}
+.itv_profile .team {margin: 10px 0 20px; color: #666; font-size: 16px;}
+.itv_profile img {width: 100%; max-width: 280px; border-radius: 10px; object-fit: cover;}
+
+.itv_content {flex: 1; display: flex; flex-direction: column; gap: 40px;}
+.itv_content img{width: 100%; max-width: 240px;}
+.itv_block h4 {font-size: 18px; color: #111; font-weight: 600; margin-bottom: 12px;}
+.itv_block p {font-size: 16px; color: #444; line-height: 1.8; letter-spacing: -0.2px;}
+
+@media (max-width: 1024px) {
+  .itv_inner {gap: 50px;}
+  .itv_profile {flex: 0 0 260px;}
+}
+
+@media (max-width: 768px) {
+  .itv_inner {flex-direction: column; align-items: center; text-align: center;}
+  .itv_profile {align-items: center;}
+  .itv_profile img {max-width: 220px; margin-top: 20px;}
+  .itv_content {margin-top: 40px;}
+}
+
+
+/* =====================================
+   블로그 페이지 반응형
+   ===================================== */
+
+/* 1024px 이하: 태블릿 */
+@media (max-width: 1024px) {
+  .blog_list {
+    grid-template-columns: repeat(2, 1fr); /* 3열 → 2열 */
+    gap: 24px;
+    padding: 60px 0;
+  }
+
+  .blog_item .thumb {
+    height: 220px;
+  }
+
+  .blog_item h3 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .blog_item p {
+    font-size: 13px;
+  }
+
+  .common_filters.blog_filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .blog_filters button {
+    flex: 0 0 auto;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+/* 768px 이하: 모바일 */
+@media (max-width: 768px) {
+  .blog_list {
+    grid-template-columns: 1fr; /* 1열 */
+    gap: 20px;
+    padding: 40px 0;
+  }
+
+  .blog_item .thumb {
+    height: 200px;
+  }
+
+  .blog_item h3 {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .blog_item p {
+    font-size: 13px;
+    color: #555;
+  }
+
+  /* 필터/검색창 정렬 */
+  .common_filters.blog_filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .keyword_box {
+    width: 100%;
+  }
+
+  .keyword_box input {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .keyword_box button {
+    right: 12px;
+  }
+}
+
+/* 480px 이하: 소형폰 */
+@media (max-width: 480px) {
+  .blog_item .thumb {
+    height: 180px;
+  }
+
+  .blog_item h3 {
+    font-size: 16px;
+  }
+
+  .blog_item p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>임직원 개인정보처리방침 | 잡코리아파트너스</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+<link rel="stylesheet" href="src/policyprivacy_common.css">
+<script src="styles/main.js" defer></script>
+<script src="styles/mainSec04.js" defer></script>
+<style>
+
+@charset "UTF-8";
+
+/* Pretendard Webfont */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body {font-family: 'Pretendard', sans-serif; font-size: 16px; font-weight: 400; color: #222; line-height: 1.4; margin: 0;padding: 0; letter-spacing: -0.5px;}
+*, *::before, *::after {box-sizing: border-box; margin: 0;padding: 0;}
+img {max-width: 100%;display: block; height: auto;}
+a {text-decoration: none;color: inherit;}
+ul {list-style: none;}
+button {border: none;background: none;cursor: pointer;}
+.container {max-width: 1400px; margin: 0 auto;}
+
+
+
+/* 헤더 고정 */
+
+.logo img{height:20px;display:block}
+.nav_list{display:flex;align-items:center;gap:2.5rem;list-style:none;margin:0;padding:0;width:100%}
+/* .nav_list li:last-child{margin-left:auto; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 400; transition: .2s; border: 1px solid #777;}
+.nav_list li:last-child:hover{background:#4b39ff;  color:#fff; border: 1px solid #4b39ff;}*/
+.nav_list li a{font-weight:500;transition:color .2s ease;text-decoration:none}
+.nav_list li a:hover{font-weight: 700;}
+
+
+.header{display:flex; flex-direction:column;align-items:stretch; position:relative;top:0;left:0;width:100%;height:86px; background:#fff;z-index:1000; padding: 27px 0 30px;}
+.header_logo{margin-bottom: 20px;}
+.header>.header_inner{margin-bottom:0}
+.header .header_tab{background:#006EF6; padding: 8px 0;}
+.header_inner{display:flex;align-items:center;gap:40px;max-width:1200px;margin:0 auto; width:100%;}
+.header_inner .tab{display:flex;align-items:center;gap:40px;max-width:1200px;margin:0 auto; width:100%;}
+
+
+
+/* Core */ .pe-wrap{ margin-top:96px; --pe-blue-2:#2157EB;--pe-blue-3:#006EF6;--pe-blue-4:#4A7BFF;--pe-ink:#0A0F1F;--pe-sub:#5B6170;--pe-line:#E6E8EF;--pe-bg:#FBFCFF;color:var(--pe-ink);}
+.pe-header{max-width:1200px;margin:40px auto 16px;}
+.pe-titlebar{display:flex;flex-direction:column;gap:8px}
+.pe-title{margin:0; padding: 4px 0 ; font-size:21px;font-weight:700;letter-spacing:-0.02em; border-bottom: 1px solid #d9d9d9;}
+.pe-meta{color:var(--pe-sub);font-size:14px;display:flex;align-items:center;gap:6px}
+.pe-chip{display:inline-block;background:var(--pe-bg);border:1px solid var(--pe-line);border-radius:999px;padding:2px 10px;font-size:12px}
+.pe-dot{opacity:.6}
+.pe-announce{margin-top:14px;color:#6a6a6a; font-size: 13px;}
+.pe-actions{margin-top:14px;display:flex;gap:8px}
+.pe-btn{appearance:none;border:1px solid var(--pe-line);background:#fff;padding:8px 12px;border-radius:8px;font-size:14px;cursor:pointer}
+.pe-btn:hover{border-color:#cbd0dc}
+.pe-body{display:grid;grid-template-columns:280px 1fr;gap:24px;max-width:1200px; margin:0 auto; padding:20px 0 64px; font-size: 13px; color: #6a6a6a;}
+.pe-toc{position:sticky;top:24px;align-self:start;border:1px solid var(--pe-line);border-radius:12px;padding:16px;background:#fff}
+.pe-toc-title{font-weight:700;margin-bottom:8px}
+.pe-toc-list{list-style:none;margin:0;padding:0}
+.pe-toc-list li{margin:0}
+.pe-toc-list a{display:block;padding:8px 10px;border-radius:8px;color:#1b1f26;text-decoration:none}
+.pe-toc-list a:hover{background:var(--pe-bg); color:#006EF6; font-weight: 700;}
+.pe-toc-list a.is-active{background:var(--pe-blue);color:#006EF6; font-weight: 700;}
+.pe-content{min-width:0}
+.pe-sec{padding:28px 24px;border:1px solid var(--pe-line);border-radius:12px;background:#fff;margin-bottom:16px}
+.pe-sec-title{font-size:16px;font-weight:800;color:var(--pe-blue-2);margin-bottom:8px}
+.pe-sec-body{color:#6a6a6a;}
+.pe-subtitle{margin-top:12px;font-weight:700}
+.pe-list{margin-top:6px}
+.pe-table-wrap{margin-top:12px;overflow:auto;border:1px solid var(--pe-line);border-radius:8px}
+.pe-table{width:100%;border-collapse:collapse;min-width:720px}
+.pe-table th{border-bottom:1px solid var(--pe-line); border-left:1px solid var(--pe-line); padding:12px 12px; text-align:left;vertical-align:top; font-size:13px}
+.pe-table td{border-bottom:1px solid var(--pe-line); border-left:1px solid var(--pe-line); padding:12px 18px; text-align:left;vertical-align:top; font-size:13px}
+.pe-table td:first-child{border-left: none;}
+.pe-table th:first-child{border-left: none;}
+.pe-table tr:last-child td{border-bottom: none;} 
+
+.pe-table thead th{background:#f1f1f1;font-weight:700;color:#111622}
+.pe-ul{margin:0;}
+.pe-card{margin-top:8px;border:1px solid var(--pe-line);border-radius:8px;padding:12px;background:#fff}
+.pe-card-row+ .pe-card-row{margin-top:6px}
+.pe-note{margin-top:8px;color:var(--pe-sub);font-size:13px}
+.pe-footer{text-align:center;color:var(--pe-sub);border-top:1px solid var(--pe-line);padding:24px 16px;margin-top:24px}
+
+/* A11y & Utilities */ [data-scroll-root]{scroll-behavior:smooth} .visually-hidden{position:absolute !important;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+
+/* Mobile */ @media (max-width: 920px){.pe-body{grid-template-columns:1fr}.pe-toc{position:relative;top:auto;order:-1;margin-bottom:8px}}
+
+
+.nav_tabs{display:flex;gap:8px;list-style:none;margin:0;padding:0;}
+.tab_btn{appearance:none; padding:10px 16px 12px 0; padding-right: 16px; border-radius:8px;font-size:15px;cursor:pointer; color:#fff; opacity: calc(0.6);}
+.tab_btn:hover{border-color:#cbd0dc;}
+.tab_btn.is-active{font-weight: 700; opacity: calc(1)}
+.tab_panels{max-width:1200px;margin:24px auto 0;padding:0 20px}
+.tab_panel{display:block}
+.tab_panel[hidden]{display:none}
+.placeholder{border:1px dashed #cbd0dc;border-radius:8px;padding:24px;color:#5B6170;background:#FBFCFF}
+
+
+
+
+footer {border-top: 1px solid #ddd;padding: 2rem 0;font-size: 0.875rem;color: #777;text-align: center;}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+.nav-list {flex-direction: column;align-items: flex-start;}
+.container {padding: 0 1rem;}
+footer { font-size: 0.75rem;}
+}
+</style>
+
+</head>
+<body>
+ <div class="header">
+  <div class="header_logo">
+    <div class="header_inner">
+      <div class="logo">
+        <a href="#"><img src="logo_color.svg"></a>
+      </div>
+      <div class="headertit">
+        <h3>잡코리아파트너스 정책</h3>
+      </div>
+    </div>
+  </div>
+  <div class="header_tab">
+    <div class="header_inner">
+    <div class="gnb">
+      <nav>
+        <ul class="nav_tabs">
+          <li><button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tab-site" id="tab-site-btn" data-tab-target="site">개인정보처리방침</button></li>
+         <li><button type="button" class="tab_btn is-active" role="tab" aria-selected="true" aria-controls="tab-employee" id="tab-employee-btn" data-tab-target="employee">임직원 개인정보처리방침</button></li>
+        <!-- 필요 시 더 추가 -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+  </div>
+</div>
+
+  <div class="pe-wrap" data-scroll-root>
+    <div class="pe-header">
+      <div class="pe-titlebar">
+        <h1 class="pe-title">임직원 개인정보처리방침</h1>
+        <!--<div class="pe-meta">
+          <span class="pe-chip">버전 1</span>
+          <span class="pe-dot">·</span>
+          <span>시행일자: 2025년 1월 2일</span>
+        </div>-->
+      </div>
+      <div class="pe-announce">
+        잡코리아파트너스 유한회사(이하 “회사”)는 임직원의 권익 보호를 위해 개인정보보호법을 비롯한 관련 법령을 준수하고 있습니다.<br />
+        회사는 개인정보 보호법 제30조에 따라 정보주체의 개인정보를 보호하고 개인정보 관련 문제를 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 운영합니다.
+      </div>
+      <!--<div class="pe-actions">
+        <button type="button" class="pe-btn" data-action="print">문서 인쇄</button>
+        <button type="button" class="pe-btn" data-action="copy-link" aria-label="현재 항목 링크 복사">현재 항목 링크 복사</button>
+      </div>-->
+    </div>
+
+    <div class="pe-body">
+      <div class="pe-toc" data-stick>
+        <div class="pe-toc-title">목차</div>
+        <ul class="pe-toc-list" data-toc>
+          <li><a href="#s1">1. 개인정보의 수집 및 이용 목적</a></li>
+          <li><a href="#s2">2. 수집·이용하는 개인정보 항목</a></li>
+          <li><a href="#s3">3. 개인정보의 처리 위탁</a></li>
+          <li><a href="#s4">4. 개인정보의 제 3 자 제공</a></li>
+          <li><a href="#s5">5. 개인정보 보유 및 이용기간</a></li>
+          <li><a href="#s6">6. 개인정보 파기절차 및 파기방법</a></li>
+          <li><a href="#s7">7. 개인정보의 안전성 확보조치</a></li>
+          <li><a href="#s8">8. 임직원의 권리의무와 그 행사방법</a></li>
+          <li><a href="#s9">9. 개인정보 보호책임자 및 개인정보 관리담당 부서</a></li>
+          <li><a href="#s10">10. 권익침해 구제방법</a></li>
+          <li><a href="#s11">11. 개인정보처리방침의 변경</a></li>
+        </ul>
+      </div>
+
+      <div class="pe-content">
+        <div id="s1" class="pe-sec" data-spy>
+          <div class="pe-sec-title">1. 개인정보 수집 및 이용 목적</div>
+          <div class="pe-sec-body">
+            회사는 임직원의 개인정보를 인사행정업무, 복지 제공, 교육, 전자계약 체결, 통계 등의 업무 목적을 위해 수집 및 이용하고 있습니다.<br> 임직원이 제공한 모든 정보는 목적 외 용도로 사용하지 않으며, 이용 목적이 변경될 시에는 사전 동의를 구할 것입니다.
+          </div>
+        </div>
+
+        <div id="s2" class="pe-sec" data-spy>
+          <div class="pe-sec-title">2. 수집·이용하는 개인정보 항목</div>
+          <div class="pe-sec-body">
+            회사가 인사행정업무, 복지 제공, 교육, 전자계약 체결, 통계 등의 목적을 위하여 수집·이용하는 임직원의 개인정보 항목은 다음과 같습니다.
+            <div class="pe-subtitle">1) 필수 항목</div>
+            <div class="pe-list">
+              성명, 주민등록번호, 사번, 주소, 사내 전화번호, 직무, 직급, 사내이메일, 사진, 주차이력, 사원증을 이용한 보안지역, 출입이력,<br>학력사항, 경력사항, 병역사항, 발령사항, 계좌정보, 장애에 관한 사항, 보훈에 관한 사항, 급·상여 지급내역, 연말정산내역
+            </div>
+            <div class="pe-subtitle">2) 선택 항목</div>
+            <div class="pe-list">
+              한자성명, 휴대폰번호, 개인이메일, 면허번호 · 자격증정보, 결혼여부 및 결혼일자, 가족관계, 주차이력
+            </div>
+          </div>
+        </div>
+
+        <div id="s3" class="pe-sec" data-spy>
+          <div class="pe-sec-title">3. 개인정보의 처리 위탁</div>
+          <div class="pe-sec-body">
+            회사는 임직원의 개인정보를 전자계약 체결, 임직원 교육 업무 목적을 위해 아래와 같이 각 위탁관리업체에 일부 개인정보를 제공하고 있으며,<br>위탁 계약 체결시 개인정보 보호법 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적·관리적 보호조치, 재위탁 제한,<br>수탁자에 대한 관리·감독 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.
+            <div class="pe-table-wrap" role="region" aria-label="개인정보 처리 위탁 현황 표" tabindex="0">
+              <table class="pe-table">
+                  <colgroup>
+                    <col style="width:15%">
+                    <col style="width:30%">
+                    <col style="width:35%">
+                    <col style="width:20%">
+                  </colgroup>
+                <thead>
+                  <tr>
+                    <th>위탁받는 자</th>
+                    <th>위탁업무 내용</th>
+                    <th>위탁항목</th>
+                    <th>보유 및 이용기간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>유밥</td>
+                    <td>법정교육</td>
+                    <td>성명, 이메일, 휴대폰번호, 사번</td>
+                    <td rowspan="7">위탁계약 종료 시까지</td>
+                  </tr>
+                  <tr>
+                    <td>타라그래픽스</td>
+                    <td>명함제작</td>
+                    <td>성명, 회사전화번호, 휴대폰번호, 회사이메일, 주소</td>
+                  </tr>
+                  <tr>
+                    <td>오피스서플라이 강남점</td>
+                    <td>사무용품 MRO</td>
+                    <td>성명, 사번, 회사전화번호, 회사이메일, 휴대폰번호</td>
+                  </tr>
+                  <tr>
+                    <td>연주테크</td>
+                    <td>사원증 제작</td>
+                    <td>성명, 사번, 영문성명</td>
+                  </tr>
+                  <tr>
+                    <td>동익성봉빌딩</td>
+                    <td>건물 출입관리 / 당사 차량 주차</td>
+                    <td>성명, 휴대폰번호 / 성명, 차량번호, 휴대폰번호</td>
+                  </tr>
+                  <tr>
+                    <td>주식회사 퀵서비스</td>
+                    <td>퀵서비스 이용</td>
+                    <td>성명, 회사전화번호, 휴대폰번호</td>
+                  </tr>
+                  <tr>
+                    <td>카카오T</td>
+                    <td>택시 이용</td>
+                    <td>성명, 회사이메일, 휴대폰번호</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="s4" class="pe-sec" data-spy>
+          <div class="pe-sec-title">4. 개인정보의 제 3 자 제공</div>
+          <div class="pe-sec-body">
+            회사는 임직원의 동의가 있거나 관련 법령의 규정에 의한 경우를 제외하고는 본 개인정보처리방침에서 고지한 범위를 넘어 임직원의 개인정보를 이용하거나 제 3 자에게 제공하지 않습니다.
+            회사는 다음과 같이 개인정보를 제 3 자에게 제공하고 있습니다. 임직원은 개인정보의 제 3 자 제공에 대하여 동의를 거부할 수 있고, 언제든지 제 3 자 제공 동의를 철회할 수 있습니다. 단, 제 3 자 제공 동의를 거부 또는 철회할 경우 4 대보험가입, 급여/복지 제공 등이 제한될 수 있습니다.
+            <div class="pe-table-wrap" role="region" aria-label="개인정보 제3자 제공 현황 표" tabindex="0">
+              <table class="pe-table">
+                  <colgroup>
+                    <col style="width:15%">
+                    <col style="width:30%">
+                    <col style="width:35%">
+                    <col style="width:20%">
+                  </colgroup>
+                <thead>
+                  <tr>
+                    <th>제공받는 자</th>
+                    <th>개인정보 이용목적</th>
+                    <th>제공하는 개인정보의 항목</th>
+                    <th>보유 및 이용기간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>고용노동부</td>
+                    <td>
+                      <ul class="pe-ul">
+                        <li>근로자 현황 및 장애인 신고</li>
+                        <li>위탁 훈련과정 신고</li>
+                        <li>청년내일채움공제 신청</li>
+                      </ul>
+                    </td>
+                    <td>성명, 급여, 입사/퇴사일, 주민등록번호, 급여대장, 휴대폰번호, 주소</td>
+                    <td rowspan="10">이용목적 달성 시</td>
+                  </tr>
+                  <tr>
+                    <td>건강보험공단</td>
+                    <td>
+                      <ul class="pe-ul">
+                        <li>보험자격득실</li>
+                        <li>과납진료비 환급</li>
+                        <li>보험료 연말정산</li>
+                      </ul>
+                    </td>
+                    <td>성명, 주민등록번호, 입사/퇴사/휴직/복직일, 휴직사유, 급여, 근무월수, 급여계좌, 연간근로소득, 휴직기간 급여</td>
+                  </tr>
+                  <tr>
+                    <td>국민연금관리공단</td>
+                    <td>보험자격득실</td>
+                    <td>성명, 주민등록번호, 입사/퇴사/휴직/복직일, 휴직사유, 급여</td>
+                  </tr>
+                  <tr>
+                    <td>장애인고용공단</td>
+                    <td>장애인 고용현황 신고</td>
+                    <td>성명, 장애인등록번호, 장애등급, 주민등록번호, 급여</td>
+                  </tr>
+                  <tr>
+                    <td>보훈청</td>
+                    <td>국가유공자 고용현황</td>
+                    <td>성명, 가족관계, 보훈번호, 주민등록번호, 급여</td>
+                  </tr>
+                  <tr>
+                    <td>근로복지공단</td>
+                    <td>
+                      <ul class="pe-ul">
+                        <li>보험자격득실</li>
+                        <li>보험료 연말정산</li>
+                      </ul>
+                    </td>
+                    <td>성명, 주민등록번호, 계약직여부, 입사/퇴사일, 계약종료월, 퇴직사유, 급여, 연간 근로소득</td>
+                  </tr>
+                  <tr>
+                    <td>고용지원센터</td>
+                    <td>
+                      <ul class="pe-ul">
+                        <li>보험자격득실</li>
+                        <li>실업급여 신청</li>
+                        <li>육아휴직급여 사후지급</li>
+                        <li>고용노동부 기업지원금 신청</li>
+                      </ul>
+                    </td>
+                    <td>성명, 주민번호, 계약직여부, 입사/퇴사일, 계약종료월, 퇴직사유, 월소정근로시간, 월급여 및 상여내역(평균임금 내역), 육아휴직기간, 재직여부, 휴가/휴직 시작일, 종료일, 급여명세서, 휴직원</td>
+                  </tr>
+                  <tr>
+                    <td>국세청</td>
+                    <td>
+                      <ul class="pe-ul">
+                        <li>연말정산</li>
+                        <li>법인세 인정상여 신고</li>
+                        <li>근로소득원천징수/신고</li>
+                      </ul>
+                    </td>
+                    <td>성명, 주민등록번호, 주소, 회사전화번호</td>
+                  </tr>
+                  <tr>
+                    <td>산업인력공단</td>
+                    <td>고용보험 환급비 신청</td>
+                    <td>훈련자의 성명, 주민등록번호, 훈련과정정보</td>
+                  </tr>
+                  <tr>
+                    <td>서울보증보험</td>
+                    <td>신원보증보험 가입</td>
+                    <td>성명, 주민등록번호, 휴대폰번호, 주소</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="s5" class="pe-sec" data-spy>
+          <div class="pe-sec-title">5. 개인정보의 보유 및 이용 기간</div>
+          <div class="pe-sec-body">
+            회사는 상기의 수집 및 이용목적이 달성될 때까지 개인정보를 보유합니다. 다만, 내부 방침 및 관련 법령의 규정에 의하여 일정한 기간 동안 정보를 보관할 수 있으며, 해당 개인정보(또는 개인정보파일)을 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보관할 수 있습니다.
+          </div>
+        </div>
+
+        <div id="s6" class="pe-sec" data-spy>
+          <div class="pe-sec-title">6. 개인정보의 파기절차 및 파기방법</div>
+          <div class="pe-sec-body">
+            <div class="pe-subtitle">1) 파기 절차</div>
+            <div class="pe-list">
+              임직원이 입사 등을 위해 제출한 정보는 목적이 달성된 후 내부 방침 및 기타 관련법령에 의해 일정 기간 저장된 후 파기됩니다. 만일, 해당 개인정보를 별도의 데이터베이스(DB)로 옮겨서 보관하는 경우에는 법률에 의하지 아니하고는 다른 목적으로 이용되지 않습니다.
+            </div>
+            <div class="pe-subtitle">2) 파기 방법</div>
+            <div class="pe-list">
+              ① 완전파괴(소각·파쇄 등)<br />
+              ② 전용 소자장비를 이용하여 삭제<br />
+              ③ 데이터가 복원되지 않도록 초기화 또는 덮어쓰기 수행
+            </div>
+          </div>
+        </div>
+
+        <div id="s7" class="pe-sec" data-spy>
+          <div class="pe-sec-title">7. 개인정보의 안전성 확보조치</div>
+          <div class="pe-sec-body">
+            회사는 개인정보가 분실, 도난, 유출, 변조, 훼손되지 아니하도록 다음과 같이 안전성 확보에 필요한 관리적, 기술적, 물리적 조치를 하고 있습니다.
+            <div class="pe-subtitle">1) 관리적 보호조치</div>
+            <div class="pe-list">
+              ① 내부관리계획의 수립 · 실시<br />
+              ② 소속직원 등에 대한 교육계획 수립 · 실시<br />
+              ③ 정기적 자체감사 실시
+            </div>
+            <div class="pe-subtitle">2) 기술적 보호조치</div>
+            <div class="pe-list">
+              ① 접근권한 제한 · 관리, 접근권한 확인을 위한 식별 · 인증조치<br />
+              ② 권한없는 접근을 차단하기 위한 시스템의 설치 등 조치<br />
+              ③ 개인정보의 안전한 저장 · 전송을 위한 암호화 등 조치<br />
+              ④ 접속기록의 보관 및 위 · 변조 방지조치<br />
+              ⑤ 보안프로그램의 설치 및 주기적 갱신 · 점검 조치
+            </div>
+            <div class="pe-subtitle">3) 물리적 보호조치</div>
+            <div class="pe-list">
+              ① 개인정보의 안전한 보관을 위한 보관시설의 마련 및 출입통제<br />
+              ② 잠금장치의 설치 등
+            </div>
+          </div>
+        </div>
+
+        <div id="s8" class="pe-sec" data-spy>
+          <div class="pe-sec-title">8. 임직원의 권리의무와 그 행사방법</div>
+          <div class="pe-sec-body">
+            임직원은 언제든지 인사담당자에게 요청하여 본인의 개인정보를 열람하거나 정정, 삭제할 수 있습니다. 또한, 개인정보 처리정지 및 동의 철회를 원하시는 경우 제 9 조의 개인정보업무담당자를 통하여 요청하실 수 있습니다.
+          </div>
+        </div>
+
+        <div id="s9" class="pe-sec" data-spy>
+          <div class="pe-sec-title">9. 개인정보 보호책임자 및 개인정보 관리담당 부서</div>
+          <div class="pe-sec-body">
+            회사는 임직원의 개인정보를 보호하고 개인정보와 관련한 사항을 처리하기 위하여 다음과 같이 개인정보보호책임자 및 업무담당자를 지정, 운영하고 있습니다. 개인정보와 관련한 문의 사항이 있으시면 아래의 개인정보 담당자에게 연락 주시기 바랍니다.
+            <div class="pe-card">
+              <div class="pe-card-row"><strong>임직원 개인정보보호책임자</strong> : 이지웅 대표 (<a href="mailto:jkp_privacy@jobkorea.co.kr">jkp_privacy@jobkorea.co.kr</a>)</div>
+              <div class="pe-card-row"><strong>임직원 개인정보업무담당자</strong> : 스태핑사업팀 김화영 사원 (<a href="mailto:jkp_contact@jobkorea.co.kr">jkp_contact@jobkorea.co.kr</a>)</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="s10" class="pe-sec" data-spy>
+          <div class="pe-sec-title">10. 권익침해 구제방법</div>
+          <div class="pe-sec-body">
+            아래의 기관은 회사와는 별개의 기관으로서, 개인정보 침해에 대한 피해구제, 상담 등을 문의할 수 있습니다.
+            <div class="pe-card">
+              <div class="pe-card-row">1) 개인정보침해신고센터: <a href="http://privacy.kisa.or.kr" target="_blank" rel="noopener noreferrer">http://privacy.kisa.or.kr</a> / 국번없이 118</div>
+              <div class="pe-card-row">2) 대검찰청 사이버수사과: <a href="http://www.spo.go.kr" target="_blank" rel="noopener noreferrer">http://www.spo.go.kr</a> / 국번없이 1301</div>
+              <div class="pe-card-row">3) 경찰청 사이버안전지킴이: <a href="http://www.police.go.kr" target="_blank" rel="noopener noreferrer">http://www.police.go.kr</a> / 국번없이 182</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="s11" class="pe-sec" data-spy>
+          <div class="pe-sec-title">11. 개인정보처리방침의 변경</div>
+          <div class="pe-sec-body">
+            현 개인정보처리방침은 법령, 정책 또는 보안기술의 변경 등에 따라 내용 추가, 삭제 및 수정 등 변경이 있을 수 있고, 내용 추가 , 삭제 및 수정이 있을 시에는 변경된 개인정보처리방침 시행일의 7 일 전부터 홈페이지 공지사항을 통하여 사전 고지할 것입니다.
+            <div class="pe-note">개인정보처리방침 버전번호: 1 / 시행일자: 2025년 1월 2일</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pe-footer">
+      © 잡코리아파트너스 유한회사
+    </div>
+  </div>
+
+  <script src="./privacy-employee.js"></script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+
+@charset "UTF-8";
+
+
+/*서비스소개-채용정보*/
+#services_tit p{font-size: 24px; font-weight: 600; margin-bottom: 45px;}
+.services_tabs {display: flex;flex-direction: column; margin: 120px 0 200px ;align-items: center; justify-content: center;}
+
+.services_services_tit{font-size: 20px; font-weight: 600}
+.services_tabs_inner {position: relative;display: flex;justify-content: center;gap: 60px; border-bottom: 1px solid rgba(0,0,0,0.05);backdrop-filter: blur(8px); /* 회색 베이스라인 */}
+
+/* 탭 기본 스타일 */
+.services_tabs .tab {position: relative;  color: #666; font-size: 24px; font-weight: 500; text-decoration: none; padding-bottom: 10px;  transition: color 0.3s ease;}
+
+
+/* 1) 인트로 레이아웃 */
+.svc_intro {display: grid;grid-template-columns: 170px 1fr; align-items: start;margin: 0px auto 180px;}
+
+/* 2) 좌측 탭(세로) */
+.svc_side_tabs {display: flex;flex-direction: column;}
+.side_tab {display: block;padding: 10px 0; font-size: 20px;font-weight: 600;color: #adadad;text-decoration: none;letter-spacing: -0.01em;}
+.side_tab:hover{color: #676c74; transition: color .2s ease;}
+.side_tab.is-active {color: #0b1220;position: relative;}
+
+
+/* 3) 우측 비주얼 카드 */
+.svc_visual { display: flex; flex-direction: column; gap: 18px; }
+
+/* 아이콘 보드 */
+.icon_grid {display: grid;grid-template-columns: repeat(6, 1fr);gap: 18px;align-items: center;justify-items: center;}
+.icon_grid img {width: 56px; height: 56px;object-fit: contain;filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));transition: transform .2s ease, filter .2s ease;}
+.icon_grid img:hover { transform: translateY(-3px); filter: drop-shadow(0 6px 16px rgba(0,0,0,0.12)); }
+
+/* 4) 아이콘 카드 하단 요약 */
+.svc_note { margin-top: 12px; }
+.svc_note_tit {font-size: 16px; font-weight: 600; color: #0b1220; letter-spacing: -0.01em; margin-bottom: 6px;}
+.svc_note_txt {font-size: 14px; color: #5a606b; line-height: 1.8;}
+
+/* 5) 채용정보 리스트(시안 톤에 맞게 라이트) */
+#services_tit .title_area p { font-size: 21px; font-weight: 600; color: #0b1220; }
+.common_filters, .recruit_filters {margin-bottom: 40px; }
+.recruit_items li {padding: 16px 0;border-bottom: 1px solid #eef1f5;}
+.recruit_items li a { font-size: 15px; color: #0b1220; }
+.recruit_items li span { font-size: 13px; color: #8a8f98; }
+
+
+/* hover overlay */
+.service_item .overlay {position:absolute; left:0; right:0; bottom:-100%; background:rgba(0,0,0,0.6); color:#fff; padding:16px; transition:all .3s ease;}
+
+.service_item:hover {transform: translateY(-4px);box-shadow: 0 12px 32px rgba(0,0,0,0.08);transition: all .35s ease;}
+.service_item .overlay {background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%);}
+
+/* 채용정보 */
+.recruit_list {margin:80px 0;}
+.recruit_list h2 {font-size:20px; margin-bottom:24px;}
+.recruit_filters {display:flex; gap:10px; margin-bottom:30px; flex-wrap:wrap;}
+.recruit_items {list-style:none; margin:0; padding:0;}
+.recruit_items li { display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid #eee;}
+.recruit_items li a {font-size:15px; color:#222; text-decoration:none;}
+.recruit_items li span {font-size:13px; color:#777;}
+
+
+
+/* 트랙 */
+.service_track {display:flex;gap:20px;}
+
+/* overlay */
+.service_item .overlay {position:absolute; left:0; right:0; bottom:-100%; background:rgba(0,0,0,0.6); color:#fff;padding:16px; transition:bottom .3s ease;}
+
+.services_services_tit{margin-top:90px}
+
+/* 슬라이드 컨테이너 */
+.service_slider { margin: 90px 0 45px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; padding-bottom: 12px; -ms-overflow-style: none;  /* IE, Edge */ scrollbar-width: none;     /* Firefox */}
+.service_slider::-webkit-scrollbar {display: none;} /* Chrome, Safari */
+.service_slider::-webkit-scrollbar-thumb { background:#ccc; border-radius:4px; }
+
+#services_services_slider .service_slider{margin: 36px 0 45px;}
+
+/* 트랙 */
+.service_track { display: flex;gap: 20px; cursor: grab;}
+.service_track:active { cursor: grabbing; }
+
+/* 카드 2열 3행 그리드 */
+.card_grid {display: grid; grid-template-columns: repeat(2, 1fr);gap: 90px 50px;justify-items: center;align-items: start;}
+
+/* 개별 카드 */
+.card_item {width: 460px;text-align: left;transition: transform .25s ease, box-shadow .25s ease;}
+.card_item img { background-color: #FBFBFB; border-radius: 20px; width: 100%; height: 240px; margin-bottom: 28px;object-fit: cover;}
+.card_item h1 {font-size: 18px;font-weight: 600;color: #0b1220;margin-bottom: 6px; }
+.card_item h2 {font-size: 15px;font-weight: 400;color: #0b1220;margin-bottom: 6px; margin-bottom: 20px; }
+.card_item p {font-size: 15px;color: #5a606b;line-height: 1.7;}
+
+
+#svc_outsourcing .card_grid{width: 460px;  gap: 260px 50px;}
+#svc_outsourcing .card_item {width: 460px; height: 240px;}
+#svc_outsourcing .card_item p {font-size: 13px; color: #797979; }
+
+
+
+/* hover overlay */
+.service_item .overlay { position: absolute;left: 0; right: 0;bottom: -100%;background: rgba(0, 0, 0, 0.6); color: #fff; padding: 16px; transition: bottom 0.3s ease;}
+.service_item:hover .overlay { bottom: 0; }
+.service_item .overlay h3 { font-size: 16px; margin-bottom: 8px; }
+.service_item .overlay p { font-size: 13px; line-height: 1.4; }
+
+
+/* 버튼 컨트롤 */
+.slide_controls {display: flex; justify-content: right;  margin-bottom: 120px;}
+.service_header { display: flex;justify-content: space-between; align-items: center; margin-bottom: 32px; gap: 20px;}
+.service_header .title_area {flex: 1;}
+.slide_controls { display: flex; gap: 10px;}
+.slide_btn {cursor: pointer; }
+
+
+/* 카드 기본 */
+.service_item {flex:0 0 auto; width:560px; scroll-snap-align:start; border-radius:20px; overflow:hidden;}
+.thumb {position:relative; width:100%; aspect-ratio:4/5; background:#111; border-radius:20px; overflow:hidden;}
+.thumb img {width:100%; height:100%; object-fit:cover; display:block; transform:scale(1.001);}
+
+/* 오버레이: 기본은 하단 그라데이션+타이틀만 보임 */
+.card_overlay {position:absolute; inset:auto 0 0 0; display:flex; flex-direction:column; gap:8px; padding:24px; color:#fff; transition:transform .28s ease, background .28s ease;}
+.ov_title {font-size:24px;  font-weight:700; }
+.ov_desc {font-size:14px; line-height:1.7; color:#eef1f6; max-height:0; overflow:hidden; transition:max-height .28s ease, opacity .2s ease; opacity:0;}
+
+/* 호버/열림 상태: 설명 펼치기 */
+.thumb:hover {background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.2) 100%);}
+.thumb:hover .ov_desc {max-height:240px; opacity:1;}
+
+/* 터치(모바일) 대응: .is-open 클래스가 붙으면 항상 펼침 */
+.thumb.is-open .card_overlay {background:linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.6) 55%, rgba(0,0,0,0.85) 100%);}
+.thumb.is-open .ov_desc {max-height:240px; opacity:1;}
+
+/* 접근성: 포커스 시에도 동작(키보드 탭) */
+.thumb:focus-within .card_overlay {background:linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.6) 55%, rgba(0,0,0,0.85) 100%);}
+.thumb:focus-within .ov_desc {max-height:240px; opacity:1;}
+
+
+
+/*----도급-----*/
+
+#outsourcing .service_item { width: 354px; height:480px; }
+
+.service_item {position:relative; overflow:hidden; border-radius:16px;}
+.service_item img {width:100%; height:100%; object-fit:cover; display:block; border-radius:16px; transition:transform .4s ease;}
+.service_item:hover img {transform:scale(1.04);}
+
+/* 아이콘 + 타이틀 세로 배치 */
+.service_item .caption {position:absolute; left:20px; bottom:20px; color:#fff; display:flex; flex-direction:column; align-items:flex-start; gap:8px;}
+.service_item .caption_icon {width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.2); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:600; line-height:1;}
+.service_item .caption_title {margin:0; font-size:18px; font-weight:700; text-shadow:0 2px 4px rgba(0,0,0,0.25);}
+
+
+
+/* 카드 클릭 가능 표시 */
+.service_item {cursor:pointer;}
+
+/* 모달 공통 */
+.outs_modal {position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:1000;}
+.outs_modal.is-open {display:flex;}
+.outs_modal_backdrop {position:absolute; inset:0; background:rgba(11,18,32,0.62);}
+.outs_modal_panel {position:relative; width:min(560px, calc(100% - 40px)); background:#fff; border-radius:20px; box-shadow:0 24px 80px rgba(11,18,32,0.28); padding:28px; z-index:1;}
+.outs_modal_close {position:absolute; top:12px; right:12px; width:32px; height:32px; border-radius:50%; border:none; background:#f0f2f6; font-size:18px; line-height:1; cursor:pointer;}
+.outs_modal_close:hover {background:#e6eaf3;}
+
+/* 헤더 */
+.outs_modal_head {margin:4px 0 10px;}
+.outs_modal_kicker {display:inline-block; padding:4px 8px; border-radius:999px; background:#e9f0ff; color:#2157EB; font-size:12px; font-weight:700; margin-bottom:8px;}
+.outs_modal_title {margin:0; font-size:22px; font-weight:800; color:#0b1220;}
+
+/* 본문 */
+.outs_modal_desc {font-size:14px; color:#424a57; line-height:1.7; margin:8px 0 10px;}
+.outs_modal_list {margin:0 0 16px;}
+.outs_modal_list ul {margin:0; padding-left:16px;}
+.outs_modal_list li {font-size:14px; color:#2a3140; line-height:1.8; list-style:disc;}
+.outs_modal_image {border-radius:14px; overflow:hidden; background:#f3f5f9;}
+.outs_modal_image img {width:100%; height:auto; display:block;}
+
+/* 스크롤 잠금 */
+.body--modal-open {overflow:hidden;}
+
+
+
+
+/* =========================
+   채용대행 소개 비주얼 카드
+   ========================= */
+
+
+.svc_visual_card {display: flex; justify-content: space-between; border-radius: 32px; gap: 100px; width: 100%; align-items: center; padding: 60px;}
+
+/* 좌측 텍스트 영역 */
+.svc_visual_left {flex: 1; max-width: 900px;}
+.svc_index {display: block; font-size: 14px;font-weight: 700; color: #2157EB; margin-bottom: 20px;}
+.svc_title {font-size: 20px; font-weight: 600; color: #0b1220;margin-bottom: 80px;}
+.svc_desc {font-size: 15px; color: #0b1220;font-weight: 300;}
+
+/* 우측 이미지 영역 */
+.svc_visual_right {flex: 1;display: flex;flex-direction: column; justify-content: center;text-align:left; gap: 60px; width: 100%;}
+.svc_visual_mockup {display: flex;justify-content: center;align-items: flex-end;gap: 28px; background-color: #F5F6FA; border-radius: 20px; width: 150px; padding: 60px 30px;  width: 100%; }
+.svc_visual_mockup img {width: 50%; height: auto; object-fit: contain; }
+
+#svc_recruit{ border-radius: 20px; border: 1px solid #F4F4F4; }
+
+
+/*----헤드헌팅-----*/
+.service_switcher_wrap {background:#fff; border: 1px solid #f5f5f5; border-radius:24px;}
+.service_switcher_inner {display:grid; grid-template-columns:1fr 1fr; align-items:center; padding: 42px 36px;}
+
+.service_switcher_left {width:420px; }
+.service_btn_list {display:flex; flex-direction:column; gap:15px;}
+
+.service_btn {position:relative; width:100%; text-align:left; font-weight: 600; background:#FAFBFD; color:#0b1220; padding:14px 0; padding-left: 24px; border-radius:999px; font-size:16px; line-height:1.6; transition:background .2s ease;}
+.service_btn .ico {position:absolute; right:24px; top:50%; transform:translateY(-50%); font-weight:700; color:#2157EB;}
+.service_btn .txt {display:inline-block; vertical-align:middle; font-size: 14px; color: #353535; padding: 5px 0;}
+.service_btn.is-active {background:#2157EB; color:#fff; border-radius: 20px; font-weight: 300; padding-left: 24px; }
+.service_btn.is-active .ico {display:none;}
+
+.service_switcher_right {display:flex; justify-content:flex-start;}
+.service_preview_phone {width:100%; border-radius:28px; display:flex; align-items:center; justify-content:center; overflow:hidden; background-color: #F5F6FA; height: 326px;}
+.service_preview_phone img {width:100%; height:100%; object-fit:cover;}
+.service_btn .desc {display: block;font-size: 16px; font-weight: 500;color: #fff; line-height: 1.2; }
+.service_btn .sub {display: block;margin-top: 6px;font-size: 14px; color: #fff; font-weight: 300;line-height: 1.4; letter-spacing: -1.5%;}
+
+
+
+
+
+/* =========================
+   반응형
+   ========================= */
+
+@media (max-width: 1024px) {
+
+    .headhunting_steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .headhunting_step_card {
+    min-height: auto;
+  }
+  .service_switcher_inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .service_preview_phone {
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+  .service_item {
+    width: 280px;
+  }
+
+
+  /* 전체 구조: 세로 → 가로 전환 */
+  .svc_intro {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+  }
+
+  /* 탭 컨테이너 */
+  .svc_side_tabs {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* ✅ 중앙 정렬 */
+    gap: 40px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    top: 60px; /* 헤더 높이에 맞게 조정 */
+    z-index: 99;
+    scroll-behavior: smooth;
+  }
+
+  /* 스크롤바 숨김 */
+  .svc_side_tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 개별 탭 */
+  .side_tab {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    white-space: nowrap;
+    padding: 16px 0;
+    transition: color 0.25s ease;
+    text-align: center;
+  }
+  .side_tab:hover {
+    color: #000;
+  }
+  .side_tab.is-active {
+    color: #000;
+    font-weight: 600;
+  }
+
+  /* ✅ 활성 탭 밑줄 (1px black) */
+  .side_tab.is-active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    transform: translateX(-50%);
+  }
+
+  /* ✅ fade 효과 제거 (중앙정렬일 땐 자연스러움 유지) */
+  .svc_side_tabs::before,
+  .svc_side_tabs::after {
+    display: none;
+  }
+
+  /* 콘텐츠 */
+  .svc_visual {
+    order: 2;
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .service_item {
+    width: 70vw;
+    max-width: 480px;
+  }
+  .ov_title {
+    font-size: 20px;
+  }
+  .ov_desc {
+    font-size: 13px;
+  }
+
+    .card_grid {grid-template-columns: 1fr;gap: 24px;}
+
+     .svc_visual_card {
+    padding: 48px 20px;
+    gap: 28px;
+    border-radius: 20px;
+  }
+
+  .svc_title {
+    font-size: 22px;
+  }
+
+  .svc_desc {
+    font-size: 14px;
+  }
+
+  .svc_visual_mockup img {
+    width: 220px;
+  }
+
+  .svc_index {
+    font-size: 14px;
+  }
+
+  #svc_outsourcing .card_grid {display: grid;grid-template-columns: repeat(1, 1fr);gap: 250px 50px;justify-items: center;align-items: start;}
+
+}
+
+@media (max-width:640px) {
+  .icon_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .svc_toptit_wrap {
+    padding: 100px 0;
+  }
+  .svc_toptit_wrap h1 {
+    font-size: 26px;
+  }
+
+   .svc_visual_card {
+
+    gap: 20px;
+  }
+
+  .svc_title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .svc_desc {
+    font-size: 13px;
+  }
+
+  .svc_visual_mockup img {
+    width: 180px;
+  }
+}

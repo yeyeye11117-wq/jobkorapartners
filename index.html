@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>잡코리아파트너스 - 필요한 인재를,필요한 순간에</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/common.css">
+  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="src/main.css">
+  <!--<script src="scripts/main.js" defer></script>-->
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/scroll-fadeUp.js" defer></script>
+
+  <link rel="icon" href="public/images/logo_favi.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/images/logo_favi.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/images/logo_favi.png">
+  <link rel="apple-touch-icon" href="public/images/logo_favi.png">
+</head>
+
+<body>
+  <!--헤더 PC-->
+  <div class="header" id="main-header">
+    <div class="container header_inner">
+      <div class="logo">
+        <a href="pages/main.html"><img src="public/images/logo_W.svg" alt="잡코리아 파트너스 로고"></a>
+      </div>
+      <div class="gnb">
+        <ul class="nav_list">
+          <li><a href="pages/services_services.html">서비스 소개 </a></li>
+          <li><a href="pages/recruiteall.html">채용정보 </a></li>
+          <li><a href="pages/blog.html">블로그</a></li>
+          <li class="nav_request"><a href="pages/contact.html" class="btn_request">서비스 신청하기</a></li>
+        </ul>
+      </div>
+      <button class="hamburger" aria-label="메뉴 열기"><img src="public/images/mo_h_menu.svg" alt="메뉴바"></button>
+    </div>
+  </div>
+
+  <!-- 전체 풀폭 메가메뉴(헤더 바로 다음에 둬야 hover 유지) -->
+  <div class="nav_megamenu_all" role="menu">
+  <div class="nav_megamenu_inner wrap">
+      <div class="nav_megamenu_inner container">
+      <div class="nav_megamenu_col">
+        <div class="nav_megamenu_tit">서비스 소개</div>
+        <ul class="nav_megamenu_list">
+          <li><a href="pages/services_services.html">인재파견</a></li>
+          <li><a href="pages/services_dogup.html">도급 · 업무대행</a></li>
+          <li><a href="pages/services_rpo.html">채용대행</a></li>
+          <li><a href="pages/services_headhunting.html">헤드헌팅</a></li>
+        </ul>
+      </div>
+      <div class="nav_megamenu_col">
+        <div class="nav_megamenu_tit">채용정보</div>
+        <ul class="nav_megamenu_list">
+          <li><a href="pages/recruiteall.html">전체 채용정보</a></li>
+          <li><a href="pages/recruit_region.html">지역별 채용</a></li>
+          <li><a href="pages/recruit_big.html">대기업 채용</a></li>
+        </ul>
+      </div>
+      <div class="nav_megamenu_col">
+        <div class="nav_megamenu_tit">블로그</div>
+        <ul class="nav_megamenu_list">
+          <li><a href="pages/blog_best.html">우수사원 인터뷰</a></li>
+          <li><a href="pages/blog_office.html">오피스 둘러보기</a></li>
+        </ul>
+      </div>
+ <div class="nav_megamenu_col nav_megamenu_brand">
+      <div class="nav_megamenu_tit">바로가기</div>
+      <div class="brand_wrap">
+        <a href="https://www.jobkorea.co.kr" target="_blank" aria-label="잡코리아">
+          <img src="public/images/header_logo_01.svg" alt="잡코리아">잡코리아
+        </a>
+        <a href="https://www.albamon.com" target="_blank" aria-label="알바몬">
+          <img src="public/images/header_logo_02.svg" alt="알바몬">알바몬
+        </a>
+        <a href="https://www.ninehire.com" target="_blank" aria-label="나인하이어">
+          <img src="public/images/header_logo_03.svg" alt="나인하이어">나인하이어
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- 모바일 사이드 메뉴 -->
+  <div class="mobile_menu" id="mobileMenu">
+    <button class="close_btn" id="closeBtn"><img src="public/images/mo_h_close.svg" alt="메뉴 닫기"></button>
+    <ul>
+      <li><a href="/about.html">서비스소개</a></li>
+      <li><a href="/services.html">채용정보</a></li>
+      <li><a href="/recruit.html">블로그</a></li>
+      <li><a href="/news.html">고객지원</a></li>
+      <li><a href="/request.html" class="btn_request">서비스 신청하기</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+
+<!-- Hero Section with Background Video -->
+<div class="mainSec01 videoHero section ">
+  <video class="maimainSec01Video" autoplay muted loop playsinline poster="public/images/hero_poster.jpg">
+    <source src="public/videos/1.mp4" type="video/mp4">
+    <!-- 1920x1080 / mp4 권장 / poster는 로딩용 썸네일 -->
+  </video>
+
+  <div class="mainSec01_overlay"></div>
+  <div class="mainSec01_inner">
+    <div class="mainSec01Text">
+      <!--<h2>필요한 인재를<br>더 빠르고 정확하게</h2>-->
+    </div>
+  </div>
+</div>
+
+  <div class="mainSec02 container scroll-fade-up section " >
+    <div class="mainSec02_head">
+      <div class="mainSec_tit">2,800만 데이터에서<br>시작되는 채용</div>
+      <div class="mainSec_txt">잡코리아·알바몬에서<br>원하는 인재를 빠르게 만나보세요</div>
+    </div>
+    <div class="mainSec02_img">
+       <img src="public/images/main_01.png" alt="데이터 기반 매칭 이미지">
+    </div>
+  </div>
+
+  <div class="mainSec03 container scroll-fade-up section " >
+    <div class="mainSec03_img">
+    <video  src="public/videos/시퀀스 02.mp4" autoplay  muted  loop  playsinline  preload="auto" poster="public/images/hero_poster.jpg"></video>
+
+    </div>
+    <div class="mainSec03_head">
+      <div class="mainSec_tit">매일 새로 등록되는<br>신규 이력서</div>
+      <div class="mainSec_txt">월 평균 6만건 이상<br>새로운 이력서가 올라오고 있어요</div>
+    </div>
+  </div>
+
+  <div class="mainSec04 container section  scroll-fade-up">
+  <div class="mainSec04_head">
+    <div class="mainSec_tit">직무와 경력에<br>꼭 맞는 인재 추천</div>
+    <div class="mainSec_txt">AI 추천으로 원하는 인재를<br>더 쉽게 찾아 드려요</div>
+  </div>
+  <div class="mainSec04_img">
+    <video  src="public/videos/매인(직무)_600.mp4" autoplay  muted  loop  playsinline  preload="auto" poster="public/images/hero_poster.jpg"></video>
+  </div>
+</div>
+  
+<div class="mainSec05">
+  <div class="mainSec05_inner section">
+    <div class="mainSec05_head">
+      <h2 class="mainSec_tit">필요한 만큼<br>자유롭게 찾으세요</h2>
+      <!--<p class="mainSec_txt">파트너스에서는 제한없이<br>원하는 만큼 서칭 할 수 있어요</p>-->
+    </div>
+    <div class="mainSec05_grid">
+        <div class="mainSec05_card">
+          <div class="card_img"><img src="" alt=""></div>
+          <div class="card_txt"><h3><span>제한없는 인재서칭</span> 파트너스에서는 제한없이 원하는 만큼<br>서칭 할 수 있어요</h3></div>
+
+        </div>
+        <div class="mainSec05_card">
+          <div class="card_img"><img src="public/images/Frame 1597881300.svg" alt=""></div>
+          <div class="card_txt"><h3><span>유료공고 등록</span></h3></div>
+        </div>
+        <div class="mainSec05_card">
+          <div class="card_img"><img src="public/images/main04_3_03.png" alt=""></div>
+          <div class="card_txt"><h3><span>나인하이어 연동</span> </h3></div>
+        </div>
+        <!--<div class="mainSec05_card">
+          <div class="card_img"><img src="public/images/main04_3_03.png" alt=""></div>
+          <div class="card_txt"><h3>최근 3개월 이내<br>지원 이력 DB</h3></div>
+        </div>-->
+    </div>
+  </div>
+</div>
+ 
+  <div class="mainSec06 section ">
+    <div class="mainSec06_inner scroll-fade-up">
+          <div class="mainSec06_head">
+      <div class="mainSec_tit">채용 후에도<br>전담팀이 함께합니다</div>
+      <!--<div class="mainSec_txt">계약부터 정산까지 꼼꼼하게 챙겨드려요</div>-->
+    </div>
+    <div class="mainSec06_grid">
+      <div class="mainSec06_card">
+        <div class="mainSec06_contit">담당자 배정</div>
+        <div class="mainSec06_contxt">전문 담당자의<br>1:1 밀착관리</div>
+        <!--<img src="public/images/mainsec05_01.png">-->
+      </div>
+      <div class="mainSec06_card">
+        <div class="mainSec06_contit">통합 관리 지원</div>
+        <div class="mainSec06_contxt">계약·근태·정산 등<br>관리까지 통합지원</div>
+       <!-- <img src="public/images/mainsec05_02.png">-->
+      </div>
+      <div class="mainSec06_card">
+        <div class="mainSec06_contit">리스크 최소화</div>
+        <div class="mainSec06_contxt">법률 자문 기반의<br>노무 리스크 최소화</div>
+        <!--<img src="public/images/mainsec05_03.png">-->
+      </div>
+    </div>
+    </div>
+  </div>
+
+<div class="mainSec07 section ">
+  <div class="mainSec07_inner">
+    <div class="mainSec07_text">
+      <!--<p class="mainSec07_kicker">더 많은 인재를 만날 수 있는 기회</p>-->
+      <div class="mainSec_tit">지금 더 빠른 채용을<br>시작하세요</div>
+      <!--<div class="mainSec_txt">채용의 시작부터 끝까지 잡코리아파트너스가 함께 합니다</div>-->
+    </div>
+    <a href="/contact.html" class="mainSec07_btn">채용 시작하기</a>
+  </div>
+</div>
+
+
+</main>
+
+
+  <!--푸터 -->
+  <footer id="main_footer section ">
+    <div class="container footer_inner">
+      <div class="footer_links">
+        <a href="/policy.html">개인정보처리방침</a> 
+        <!--<a href="/about.html">회사소개</a> -->
+        <a href="/group.html">그룹사소개</a>
+      </div>
+      <div class="footer_info">
+        <p><strong>잡코리아파트너스 유한회사</strong></p>
+        <p>대표 : 이지웅 | 근로자파견사업 허가번호 : 2024-610</p>
+        <p>주소 : 서울시 서초구 서초대로 301 동익성봉빌딩 16~18층</p>
+        <p>이메일 : jkp_contact@jobkorea.co.kr</p>
+        <p>대표번호 : 070-8671-2254 (평일 09:00~18:00) | 팩스 : 0503-8379-5409</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
